@@ -1,8 +1,9 @@
 FROM debian:12.2
 
-# install rdfind
+# install rdfind and other required tools
 RUN apt-get update && apt-get install -y \
     rdfind \
+    wget \
     && rm -rf /var/lib/apt/lists/*
 
 # install fclones
